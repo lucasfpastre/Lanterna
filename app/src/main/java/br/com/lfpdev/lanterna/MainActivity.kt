@@ -1,8 +1,10 @@
 package br.com.lfpdev.lanterna
 
 import android.content.Context
+import android.content.Intent
 import android.hardware.camera2.CameraCharacteristics
 import android.hardware.camera2.CameraManager
+import android.net.Uri
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import br.com.lfpdev.lanterna.databinding.ActivityMainBinding
@@ -27,6 +29,11 @@ class MainActivity : AppCompatActivity() {
     private fun setListeners() {
         binding.cvFlashlight.setOnClickListener {
             manageFlashlight()
+        }
+        binding.btSource.setOnClickListener {
+            val url = "https://github.com/lucasfpastre/Lanterna.git"
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+            startActivity(intent)
         }
     }
 

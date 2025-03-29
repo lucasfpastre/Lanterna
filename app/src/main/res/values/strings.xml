@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Lanterna</string>
     <string name="text_flashlight">Lanterna</string>
+    <string name="text_source_code">Código Fonte</string>
 </resources>
